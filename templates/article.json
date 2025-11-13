@@ -1,0 +1,71 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_image": true,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "content_width": "sm",
+        "show_date": true,
+        "show_category": false,
+        "show_author": false,
+        "show_share_buttons": true,
+        "show_sticky_bar": true
+      }
+    },
+    "prev-next-blog-posts": {
+      "type": "prev-next-blog-posts",
+      "settings": {
+        "separate_section_with_border": false,
+        "subheading": "",
+        "title": "Read more",
+        "show_category": true,
+        "show_excerpt": true,
+        "show_read_more": true
+      }
+    },
+    "1659748180ec59737d": {
+      "type": "featured-collections",
+      "blocks": {
+        "16597481802da43a1a-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestsellers",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "16597481802da43a1a-0"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "Featured collection"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "prev-next-blog-posts",
+    "1659748180ec59737d"
+  ]
+}

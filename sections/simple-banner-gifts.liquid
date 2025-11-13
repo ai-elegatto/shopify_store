@@ -1,0 +1,287 @@
+
+ {% style %}
+        .banner-container{
+            display:flex;
+            align-items:center;
+            justify-content:flex-start;
+            margin:auto;
+            padding:0 3% 0 37%;
+           
+            position: relative;
+        }
+        @media(max-width:768px){
+            .banner-container{
+                align-items: flex-end;
+                justify-content: center;
+                padding: 20px 15px;
+            }    
+        }
+        .banner-container:before{
+            display: block;
+            content: "";
+            padding-bottom: {{section.settings.height}}px;
+        }
+        .smpl-banner-text{
+            position:relative;
+        } 
+        .banner-container .smpl-image{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+      
+            max-height: 100%;
+            max-width: 100%;
+        }
+        .banner-container .smpl-img-mob{
+            display:none;
+        }
+        @media(max-width:768px){
+            .banner-container:before{
+                    padding-bottom: {{section.settings.height_mob}}px;
+                }
+            .banner-container .smpl-img-desc{
+                display:none;
+            }
+            .banner-container .smpl-img-mob{
+                display:block;
+            }
+        }
+        .section-{{ section.id }}{
+            max-width:{{section.settings.width}}px;
+        }
+        @media(max-width:768px){
+            .section-{{ section.id }}{
+                    /* max-width:{{section.settings.width_mob}}px; */
+                    max-width:100%;
+              
+                }
+        }
+         {% if section.settings.width == 0 %}
+        .section-{{ section.id }}{
+            max-width:100%;
+        }
+        {% endif %}
+
+
+        /*****BNanner text design*******/
+        .main-title-banner{
+            color: #000;
+            text-align: center;
+            font-size: 36.606px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%; /* 40.266px */
+            letter-spacing: 3.661px;
+            text-transform: uppercase;
+        }
+        .gifn-banner-logo{
+            color: #000;
+            text-align: center;
+            font-size: 17.443px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 1.221px;
+            text-transform: uppercase;
+            margin-top:16px;
+        }
+        .gifn-banner-logo svg{
+            display:block;
+            margin:7px auto 0 auto;
+        }
+        .main-title-code-text{
+            display: inline-flex;
+            height: 45px;
+            justify-content: center;
+            align-items: center;
+            background: #FFF;
+            color: #000;
+            padding:0 15px;
+            text-align: center;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0.72px;
+            text-transform: uppercase;
+            margin-bottom:15px;
+        }
+        .shop-now-btn{
+            margin-top:36px;
+            text-align: center;
+        }
+        .shop-now-btn a{
+            display:inline-flex;
+            color: #000;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%; /* 17.852px */
+            letter-spacing: 3.246px;
+            padding:3px 5px;
+            text-transform: uppercase;
+            border: 1px solid #000;
+        }
+
+        .limited-text-gift{
+            position:absolute;
+            left:15px;
+            top:15px;
+            width:170px;
+            color: #FFF;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; /* 18px */
+            letter-spacing: 3.75px;
+            text-transform: uppercase;
+        }
+       
+
+        @media(max-width:768px){
+            .main-title-banner{
+                text-align: center;
+                font-size: 21.208px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%; /* 23.328px */
+                letter-spacing: 2.121px;
+                text-transform: uppercase;
+                max-width: 250px;
+            }
+            .limited-text-gift{
+                left:auto;
+                right: 15px;
+                text-align: right;
+                font-size: 8.81px;
+                max-width: 150px;
+            }
+            .gifn-banner-logo{
+                text-align: center;
+                font-size: 8.811px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: 0.617px;
+                text-transform: uppercase;
+            }
+            .gifn-banner-logo svg{
+                max-width:50px;
+                margin-top:0;
+            }
+            .shop-now-btn{
+                margin-top:15px;
+            }
+            .shop-now-btn a{
+                color: #000;
+                font-size: 9.397px;
+             
+                font-weight: 400;
+                line-height: 110%; 
+                letter-spacing: 1.879px;
+
+            }
+        }
+
+ {% endstyle %}
+ 
+  
+    {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+  
+    <div class="banner-container section-{{ section.id }} {{section.settings.class}}">
+        {% if section.settings.image_desc != blank %}
+            <img src="{{section.settings.image_desc | img_url : 'master'}}" class="smpl-image smpl-img-desc">
+        {% endif %}
+        {% if section.settings.image_mob != blank %}
+            <img src="{{section.settings.image_mob | img_url : 'master'}}" class="smpl-image smpl-img-mob">
+        {% endif %}
+        <div class="smpl-banner-text">
+            {{section.settings.text}}
+        </div>
+        <div class="limited-text-gift">Limited stock</div>
+    </div>
+  
+  
+  {% schema %}
+  {
+    "name": "Simple banner gifts",
+    "class": "simple-banner-gifts",
+    "tag": "section",
+    "disabled_on": {
+      "groups": ["custom.overlay"]
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_desc",
+        "label": "Image desctop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mob",
+        "label": "Image mobile"
+      },
+      {
+        "type": "html",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "range",
+        "id": "width",
+        "min": 0,
+        "max": 2000,
+        "step": 20,
+        "unit": "px",
+        "label": "Container width",
+        "default": 2000
+        },
+        {
+        "type": "range",
+        "id": "width_mob",
+        "min": 0,
+        "max": 2000,
+        "step": 20,
+        "unit": "px",
+        "label": "Container width mobile",
+        "default": 400
+        },
+        {
+        "type": "range",
+        "id": "height",
+        "min": 0,
+        "max": 3000,
+        "step": 50,
+        "unit": "px",
+        "label": "Height",
+        "default": 700
+        },
+        {
+        "type": "range",
+        "id": "height_mob",
+        "min": 0,
+        "max": 3000,
+        "step": 50,
+        "unit": "px",
+        "label": "Height mobile",
+        "default": 500
+        },
+        {
+        "type": "text",
+        "id": "class",
+        "label": "Custom class"
+      }
+    
+    ],
+    "presets": [
+      {
+        "name": "Simple banner gifts"
+      }
+    ]
+  }
+  {% endschema %}
+  

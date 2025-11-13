@@ -1,0 +1,154 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %},
+  "setGallerySize": true,
+  "wrapAround": true,
+  "watchCSS": true,
+  "dragThreshold": 8
+}
+{%- endcapture -%}
+
+<section id="section-{{ section.id }}" class="Section Section--spacingSmall" data-section-id="{{ section.id }}" data-section-type="collection-list">
+  <div class="container">
+    {%- capture collection_items -%}
+      {%- for block in section.blocks -%}
+        {%- assign collection = collections[block.settings.collection] -%}
+        {%- assign collection_image = block.settings.image | default: collection.image | default: collection.products.first.featured_image -%}
+    		<a href="{{ collection.url }}" class="custom-collection-list collection-wrapper Grid__Cell 1/2--phone 1/2--tablet 1/4--lap-and-up">
+            <img src="{{ collection_image | img_url: '1000x' }}"/>
+            <div class="over-text">
+            <h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading u-h1">{{ block.settings.title | default: collection.title | escape }}</h2>
+            </div>
+    		</a>
+      {%- endfor -%}
+    {%- endcapture -%}
+  
+    
+      <div class="CollectionList ProductList--grid" data-mobile-count="2" data-desktop-count="4">
+        {{ collection_items }}
+      </div>
+    </div>
+</section>
+
+<style>
+  .CollectionList {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-gap:20px;
+  }
+  @media(max-width:1024px){
+      .CollectionList {
+          grid-template-columns:1fr 1fr;
+        gap:10px;
+      }
+  }
+  .Section--spacingSmall {
+  		padding: 20px 0;
+  }
+  .custom-collection-list .over-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 10px;
+  }
+  .custom-collection-list.Grid__Cell {
+  		margin-bottom: 0;
+  }
+  .custom-collection-list .over-text .SectionHeader__Heading {
+          color: #fff;
+    font-size: 18px !important;
+    line-height: normal;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .custom-collection-list {
+  	  position: relative;
+  }
+  #section-{{ section.id }} .CollectionItem .Heading,
+  #section-{{ section.id }} .flickity-page-dots {
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .CollectionItem__Link {
+    color: {{ section.settings.button_color }};
+    border-color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .CollectionItem__Link::before {
+    background-color: {{ section.settings.text_color }};
+  }
+
+  @media (-moz-touch-enabled: 0), (hover: hover) {
+    #section-{{ section.id }} .CollectionItem__Link:hover {
+      color: {{ section.settings.text_color }};
+    }
+  }
+  @media (max-width: 768px) {
+    .custom-collection-list .over-text .SectionHeader__Heading {
+        font-size: 14px !important;
+    }
+    .custom-collection-list.Grid__Cell {
+          margin-bottom: 0;
+    }
+    .Section--spacingSmall {
+          padding: 10px 0;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Collection list",
+  "max_blocks": 8,
+  "settings": [
+    
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1120 x 1200px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Collection name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Collection",
+      "name": "Custom Collection list",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

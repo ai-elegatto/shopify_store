@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="logos-blocks">
+    {%- for block in section.blocks -%}
+      {%- if block.settings.img != blank and block.settings.text -%}
+        <div class="logos-block">
+          <div class="logos-block__img">
+            {{
+              block.settings.img
+              | image_url: width: block.settings.img.width
+              | image_tag: class: '', loading: 'lazy'
+            }}
+          </div>
+
+          <p class="logos-block__text">{{ block.settings.text }}</p>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Logos",
+  "class": "logos",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Logo",
+      "type": "logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Img"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logos"
+    }
+  ]
+}
+{% endschema %}

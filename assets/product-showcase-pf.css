@@ -1,0 +1,139 @@
+.product-showcase-pf {
+  background: #fff;
+  padding: 12px 8px;
+  .product-showcase__details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .product-showcase__breadcrumb {
+      display: flex;
+      padding: 0;
+      gap: 10px;
+      align-self: stretch;
+      color: #707070;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 1.4px;
+    }
+    .product-showcase__tag-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .product-showcase__best-seller {
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 8px;
+        gap: 10px;
+        border: 1px solid #707070;
+        background: #efefef;
+
+        span {
+          color: #1c1c1c;
+          font-family: Montserrat;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 11px;
+          letter-spacing: 0.44px;
+          text-transform: uppercase;
+        }
+      }
+      .product-showcase__gift {
+        display: flex;
+        width: fit-content;
+        padding: 12px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        align-self: stretch;
+        border: 1px solid #1c1c1c;
+      }
+    }
+
+    .product-showcase__product-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .product-showcase__title {
+        color: #1c1c1c;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 38px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+      }
+
+      .product-showcase__price {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        .price {
+          color: rgba(28, 28, 28, 0.65);
+          font-family: Montserrat;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 1.4px;
+          text-decoration-line: line-through;
+          text-transform: uppercase;
+        }
+        .compare {
+          color: #ca384c;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px; /* 111.111% */
+          letter-spacing: 1.8px;
+          text-transform: uppercase;
+        }
+        .discount {
+          background: #ca384c;
+          display: flex;
+          padding: 4px 8px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          color: #fff;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px;
+        }
+      }
+
+      .product-showcase__review {
+        .product-showcase__review-card {
+          .product-showcase__review-rating {
+            
+          }
+          .product-showcase__review-description {
+            color: #525252;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 21px;
+          }
+          .product-showcase__review-footer {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            img {
+            }
+          }
+        }
+      }
+    }
+  }
+}

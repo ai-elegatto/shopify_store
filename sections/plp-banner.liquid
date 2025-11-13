@@ -1,0 +1,116 @@
+<div class="home-banner {{ section.settings.class_custom }}">
+  <div class="home-banner__block">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'heading' -%}
+          {%- if block.settings.title != blank -%}
+            <h1 class="home-banner__title">{{ block.settings.title }}</h1>
+          {%- endif -%}
+        {%- when 'logo' -%}
+          {%- if block.settings.logos != blank -%}
+            {{
+              block.settings.logos
+              | image_url: width: block.settings.logos.width
+              | image_tag: class: 'home-banner__logos', loading: 'lazy'
+            }}
+          {%- endif -%}
+        {%- when 'text' -%}
+          {%- if block.settings.text != blank -%}
+            <div class="home-banner__text">{{ block.settings.text }}</div>
+          {%- endif -%}
+      {%- endcase -%}
+    {%- endfor -%}
+    
+   
+    
+  </div>
+  {%- if section.settings.img != blank -%}
+    {%- if section.settings.img_mob != blank -%}
+      {{
+        section.settings.img
+        | image_url: width: section.settings.img.width
+        | image_tag: class: 'home-banner__img home-banner__img--desktop', loading: ''
+      }}
+      {{
+        section.settings.img_mob
+        | image_url: width: section.settings.img_mob.width
+        | image_tag: class: 'home-banner__img home-banner__img--mobile', loading: ''
+      }}
+    {%- else -%}
+      {{
+        section.settings.img
+        | image_url: width: section.settings.img.width
+        | image_tag: class: 'home-banner__img', loading: ''
+      }}
+    {%- endif -%}
+  {%- endif -%}
+</div>
+{% schema %}
+{
+  "name": "PLP Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Img"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_mob",
+      "label": "Img for Mobile"
+    },
+
+
+
+    {
+      "type": "text",
+      "id": "class_custom",
+      "label": "Custom Class"
+    }
+    
+  ],
+  "blocks": [
+    {
+      "name": "Heading",
+      "type": "heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "name": "Logo",
+      "type": "logo",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logos",
+          "label": "Logo"
+        }
+      ]
+    },
+    {
+      "name": "Text",
+      "type": "text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PLP Banner"
+    }
+  ]
+}
+{% endschema %}

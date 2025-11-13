@@ -1,0 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "54723c7f-13dc-47ac-bffb-a8c4deeca674": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16159672336558__54723c7f-13dc-47ac-bffb-a8c4deeca674-subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "text": "the perfect"
+          }
+        },
+        "template--16159672336558__54723c7f-13dc-47ac-bffb-a8c4deeca674-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "GIft",
+            "heading_tag": "h1"
+          }
+        },
+        "template--16159672336558__54723c7f-13dc-47ac-bffb-a8c4deeca674-richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16159672336558__54723c7f-13dc-47ac-bffb-a8c4deeca674-subheading-1",
+        "template--16159672336558__54723c7f-13dc-47ac-bffb-a8c4deeca674-heading-1",
+        "template--16159672336558__54723c7f-13dc-47ac-bffb-a8c4deeca674-richtext-1"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "page_width": "xs"
+      }
+    }
+  },
+  "order": [
+    "54723c7f-13dc-47ac-bffb-a8c4deeca674",
+    "main"
+  ]
+}

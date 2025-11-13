@@ -1,0 +1,128 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_MXXjUt": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_yd9AYL": {
+          "type": "subheading",
+          "settings": {
+            "text": "Designed in California"
+          }
+        },
+        "heading_bd77gm": {
+          "type": "heading",
+          "settings": {
+            "text": "Men's collection",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_Wc3TWE": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Today, Elegatto is known and loved by more than 85,000 men all over the world.</p><p></p><p>Whether you're looking to elevate your formal attire or add a touch of sophistication to your everyday wardrobe, Elegatto's Gentleman's Legacy collection offers an exclusive range of statement pieces that exude confidence and style on land or sea.</p>"
+          }
+        },
+        "button_6AHjUd": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Shop Men's",
+            "url": "shopify://collections/the-bracelet-collection",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_yd9AYL",
+        "heading_bd77gm",
+        "richtext_Wc3TWE",
+        "button_6AHjUd"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Collection_Page_Banner_Desktop.png",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "collections": [],
+        "collections_per_row_desktop": 3,
+        "image_size": "auto",
+        "content_position": "place-self-end-start text-start",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "image_with_text_geC4Tm": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_86JMXK": {
+          "type": "subheading",
+          "settings": {
+            "text": "Handcrafted Elegance"
+          }
+        },
+        "heading_6D8DRE": {
+          "type": "heading",
+          "settings": {
+            "text": "Women's collection",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_8ETBka": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>We designed timeless shapes, organic forms and elegant natural materials layered with rich texture, earthen hues, and stunning statement pieces with a meticulous attention to detail and a deep appreciation for the beauty of nature.</p>"
+          }
+        },
+        "button_NXRw67": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Shop Women's",
+            "url": "shopify://collections/womens-collection",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_86JMXK",
+        "heading_6D8DRE",
+        "richtext_8ETBka",
+        "button_NXRw67"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Collection_Page_Banner_Desktop_3cff7095-9e88-455a-bbe0-7606e94f62e3.png",
+        "reveal_on_scroll": true,
+        "image_position": "end",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    }
+  },
+  "order": [
+    "image_with_text_MXXjUt",
+    "main",
+    "image_with_text_geC4Tm"
+  ]
+}

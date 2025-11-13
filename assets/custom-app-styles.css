@@ -1,0 +1,630 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+#rebuy-widget-89696 {
+  padding: 60px !important;
+  margin: 0 auto !important;
+
+  max-width: 1440px;
+  .rebuy-widget {
+  }
+
+  .rebuy-widget .rebuy-product-block {
+    padding: 0 !important;
+  }
+
+  .primary-title {
+    color: #1c1c1c;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .rebuy-product-media img {
+    width: 183px;
+    height: 183px;
+  }
+  .rebuy-product-title {
+    color: #1c1b1b;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .rebuy-review-count {
+    color: #1c1b1b;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .rebuy-money {
+    color: #1c1b1b;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+  }
+  .compare-at {
+    color: #707070;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+    text-decoration-line: line-through;
+  }
+  .rebuy-product-review {
+    margin: 8px 0;
+  }
+  .rebuy-widget .rebuy-product-block .rebuy-product-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  .rebuy-select {
+    background: transparent;
+    border: none;
+    color: #1c1b1b;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #rebuy-widget-89696 .rebuy-select option {
+    background: transparent;
+    border: none;
+    color: #1c1b1b;
+    text-align: center;
+    text-align-last: center;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0;
+    width: 100%;
+  }
+  .rebuy-button {
+    display: flex;
+    max-width: 239px;
+    padding: 13px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18.15px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    margin: 0 auto;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .rebuy-carousel__arrow svg {
+    width: 28px;
+    height: 40px;
+  }
+}
+
+/* Arrows - You may also like  */
+
+.rebuy-widget .rebuy-carousel__arrow--prev {
+  left: -30px !important;
+}
+
+.rebuy-widget .rebuy-carousel__arrow--next {
+  right: -30px !important;
+}
+
+/* Okendo Reviews */
+
+#shopify-product-reviews-eo {
+  background: #fff;
+}
+
+.shopify-product-reviews-eo-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviewsAggregate {
+  max-width: 615px;
+  margin: 0 auto;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviewsAggregate-primary {
+  width: fit-content;
+}
+
+#shopify-product-reviews-eo .okeReviews-badge--rating {
+  display: inline-flex;
+  padding: 3px 11px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  background-color: #05316b;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25.6px;
+}
+
+#shopify-product-reviews-eo .okereviews-title {
+  color: #1c1c1c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+#shopify-product-reviews-eo .okeReviews-badge--recommended {
+  display: inline-flex;
+  height: 32px;
+  padding: 2px 9px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: #05316b;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22.4px;
+}
+
+#shopify-product-reviews-eo .okeReviews-barGraph-layer--foreground {
+  background-color: #05316b;
+}
+
+#shopify-product-reviews-eo .okeReviews-ratingDistribution-item-label-inner {
+  color: #05316b;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: left;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviewsAggregate-recommends {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+#shopify-product-reviews-eo
+  .okeReviews-reviewsAggregate-recommends
+  span:not(.okeReviews-badge--recommended) {
+  text-align: left;
+  color: #707070;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  top: -5px;
+  position: relative;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviews-controls-reviewCount {
+  display: none;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviews-controls-sort {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+#shopify-product-reviews-eo
+  .okeReviews-reviewsWidget-header-controls-writeReview {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #707070;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  border: 1px solid #707070;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviews-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  height: 100%;
+}
+
+#shopify-product-reviews-eo .okeReviews-review {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #efefef;
+  background: #f4f4f4;
+  height: 100%;
+  max-height: 450px;
+  border-bottom: none;
+  position: relative;
+  overflow: hidden;
+}
+
+#shopify-product-reviews-eo .okeReviews-review::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(244, 244, 244, 0) 0%, rgba(244, 244, 244, 1) 100%);
+}
+
+#shopify-product-reviews-eo .okeReviews-avatar--reviewer {
+  width: 56px;
+  height: 56px;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-reviewer-profile-name {
+  color: #172426;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#shopify-product-reviews-eo .okeReviews-reviews-review {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-reviewer-profile {
+  display: flex;
+  border-bottom: 0;
+  gap: 16px;
+  align-items: flex-start;
+  align-self: stretch;
+  margin: 0;
+  padding: 0;
+  height: 102px;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-reviewer-profile-details {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-date {
+  float: none;
+  color: #05316b;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+#shopify-product-reviews-eo
+  .okeReviews-review-reviewer-profile-status--verified {
+  color: #525252;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-reviewer-profile-details-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-side {
+  border: none;
+  padding: 0;
+}
+
+#shopify-product-reviews-eo .okeReviews-review .okeReviews-review-primary {
+  border: none;
+  text-align: left;
+  padding: 0;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-recommendation,
+#shopify-product-reviews-eo .okeReviews-review-helpful,
+#shopify-product-reviews-eo .okeReviews-reviewsWidget-header {
+  display: none;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviewsWidget {
+  padding: 0;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-main {
+  margin-bottom: 0;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-main-heading {
+  color: #05316b;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-meta {
+  margin-bottom: 12px;
+}
+
+#shopify-product-reviews-eo .okeReviews-review-main-content-body {
+  color: #05316b;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+#shopify-product-reviews-eo .okeReviews-avatar-placeholder {
+  color: #525252;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44.8px;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviews-footer {
+  margin-top: 48px;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviews-footer:before {
+  display: none;
+}
+
+#shopify-product-reviews-eo .okeReviews-reviews-footer button {
+  display: flex;
+  width: 537px;
+  height: 53px;
+  padding: 14px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1.5px solid #1c1c1c;
+  color: #1c1c1c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24.75px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+#shopify-product-reviews-eo .okeReviews-starRating-indicator-layer--foreground {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2280%22%20height%3D%2214%22%20viewBox%3D%220%200%2080%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%2305316B%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M71.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM55.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM40.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53-3.508-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM24.076%2011.368l-3.94%202.42c-.475.292-.757.096-.63-.443l1.076-4.53-3.507-3.022c-.422-.363-.324-.693.238-.74l4.603-.37%201.78-4.3c.21-.51.55-.512.76%200l1.78%204.3%204.602.37c.554.046.667.37.24.74l-3.508%203.02%201.074%204.532c.127.536-.146.74-.628.444l-3.94-2.422zM8.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53L1.12%205.792c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+#shopify-product-reviews-eo .sort-by-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: #707070;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  margin-bottom: 8px;
+}
+
+.rebuy-product-grid,
+#rebuy-widget-89696 .rebuy-product-block {
+  padding: 0 !important;
+}
+
+@media (max-width: 767px) {
+  #rebuy-widget-89696 {
+    padding: 60px 0 60px 14px !important;
+  }
+
+  #shopify-product-reviews-eo {
+    padding: 24px 14px;
+  }
+
+  #shopify-product-reviews-eo .okeReviews-reviews-main {
+    display: flex;
+    flex-direction: column;
+    margin: 19px;
+  }
+
+  #shopify-product-reviews-eo
+    .okeReviews-reviewsWidget-header-controls-writeReview {
+    display: flex;
+    height: 36px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+  }
+
+  #shopify-product-reviews-eo .okeReviews-review {
+    height: unset;
+  }
+
+  #shopify-product-reviews-eo .okeReviews-select {
+    height: 36px;
+    border-color: #707070;
+  }
+
+  #shopify-product-reviews-eo .okeReviews-select::before {
+    border-color: #707070;
+  }
+
+  #shopify-product-reviews-eo .okeReviews-reviews-controls-sort {
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  #shopify-product-reviews-eo
+    .okeReviews-reviewsWidget-header-controls-writeReview {
+    color: #707070;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.4px;
+  }
+  #shopify-product-reviews-eo .okeReviews-reviews-footer button {
+    color: #1c1c1c;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24.75px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    text-transform: uppercase;
+    display: flex;
+    height: 53px;
+    padding: 14px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+  #shopify-product-reviews-eo .okeReviews-reviews-footer {
+    margin-top: 8px;
+  }
+  #shopify-product-reviews-eo .okereviews-title {
+    margin-bottom: 32px;
+  }
+  #shopify-product-reviews-eo .okeReviews-reviewsAggregate-recommends {
+    padding-right: 61px;
+  }
+  #shopify-product-reviews-eo .okeReviews-reviewsAggregate-side,
+  #shopify-product-reviews-eo .okeReviews-reviewsAggregate-primary {
+    padding: 22px;
+  }
+
+  #shopify-product-reviews-eo .okeReviews-reviewsAggregate-side {
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+    border-right: none;
+  }
+
+  .okeReviews .okeReviews-reviewsAggregate-primary {
+    border: 1px solid #efefef;
+  }
+
+  #splide03 {
+    padding: 0 !important;
+  }
+
+  #splide03 .splide__arrows,
+  #splide03 .splide__pagination {
+    display: none !important;
+  }
+
+  #splide03 .splide__track {
+    overflow-x: auto !important;
+    scrollbar-width: thin;
+    scrollbar-color: #000 #fff;
+    margin-left: 0 !important;
+  }
+
+  #splide03 .splide__track::-webkit-scrollbar {
+    height: 5px;
+    background: #fff;
+    border-radius: 40px;
+  }
+
+  #splide03 .splide__track::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+
+  #splide03-list {
+    gap: 8px !important;
+  }
+
+  #rebuy-widget-89696 .rebuy-product-block {
+    padding-bottom: 24px !important;
+    width: 175px !important;
+  }
+  .shopify-product-reviews-eo-wrapper {
+    padding: 0;
+  }
+
+  #shopify-section-template--18659154722990__1731686631ad8f872e {
+    overflow-x: hidden !important;
+  }
+}
+
+/* You May also Like */

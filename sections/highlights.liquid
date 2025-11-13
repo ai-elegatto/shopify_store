@@ -1,0 +1,100 @@
+{{ 'highlights-section.css' | asset_url | stylesheet_tag }}
+
+<div class="highlights__container">
+  <div class="highlights__wrapper">
+    <img width="100%" height="237.403" class="highlights__image" src="{{ section.settings.image | image_url }}" alt="">
+    <div class="highlights__details-wrapper">
+      <div class="highlights__details">
+        <div class="highlights__header">
+          <h2 class="highlights__header-title">{{ section.settings.title }}</h2>
+          <span class="highlights__header-description">{{ section.settings.description }}</span>
+        </div>
+      </div>
+      <div class="highlights__table">
+        <div class="highlights__table-positive-container">
+          <div class="highlights__table-title elegatto">{{ section.settings.elegatto_title }}</div>
+          {% for block in section.blocks %}
+            <div class="highlights__table-item">
+              <img
+                width="24"
+                height="24"
+                src="https://cdn.shopify.com/s/files/1/0081/5379/2589/files/check-circle.svg"
+                alt="Check Mark"
+              >
+              <span>{{ block.settings.positive }}</span>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="highlights__table-negative-container">
+          <div class="highlights__table-title other-brands">{{ section.settings.other_brands_title }}</div>
+          {% for block in section.blocks %}
+            <div class="highlights__table-item negative">
+              <span>{{ block.settings.negative }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Highlights Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Section Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image"
+    },
+    {
+      "type": "text",
+      "id": "elegatto_title",
+      "label": "Elegatto Title",
+      "default": "Elegatto"
+    },
+    {
+      "type": "text",
+      "id": "other_brands_title",
+      "label": "Other Brands Title",
+      "default": "Other Brands"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_block",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "positive",
+          "label": "Positive"
+        },
+        {
+          "type": "text",
+          "id": "negative",
+          "label": "Negative"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Highlights Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

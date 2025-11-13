@@ -1,0 +1,53 @@
+{{ 'exchange-section.css' | asset_url | stylesheet_tag }}
+
+<div class="exchange__container">
+  <div class="exchange__wrapper">
+  <div class="exchange__details">
+    <div class="exchange__details-header">
+      <h4 class="exchange__details-subheading">{{ section.settings.subheadline }}</h4>
+      <h2 class="exchange__details-title">{{ section.settings.title }}</h2>
+    </div>
+    <span class="exchange__details-description">{{ section.settings.description }}</span>
+  </div>
+  <div class="exchange__image">
+    <img width="694" height="424" src="{{ section.settings.image | image_url }}" alt="{{ section.settings.title }}">
+  </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Exchange Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "Easy Returns"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "30-Day Exchange Policy"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Section Description",
+      "default": "We offer hassle-free returns and exchanges within 30 days of purchase."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Exchange Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

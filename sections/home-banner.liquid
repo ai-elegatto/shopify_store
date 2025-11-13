@@ -1,0 +1,109 @@
+<div class="home-banner {{ section.settings.class_custom }}">
+  <div class="home-banner__block">
+    {%- if section.settings.subtitle_top != blank -%}
+      <h3 class="home-banner__subtitle--top">{{ section.settings.subtitle_top }}</h3>
+    {%- endif -%}
+    {%- if section.settings.title != blank -%}
+      <h1 class="home-banner__title">{{ section.settings.title }}</h1>
+    {%- endif -%}
+    {%- if section.settings.subtitle != blank -%}
+      <h3 class="home-banner__subtitle">{{ section.settings.subtitle }}</h3>
+    {%- endif -%}
+    {%- if section.settings.button_link != blank and section.settings.button_text != blank -%}
+      <a href="{{ section.settings.button_link }}" class="home-banner__btn">{{ section.settings.button_text }}</a>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <div class="home-banner__text">{{ section.settings.text }}</div>
+    {%- endif -%}
+    {%- if section.settings.logos != blank -%}
+      {{
+        section.settings.logos
+        | image_url: width: section.settings.logos.width
+        | image_tag: class: 'home-banner__logos', loading: ''
+      }}
+    {%- endif -%}
+  </div>
+  {%- if section.settings.img != blank -%}
+    {%- if section.settings.img_mob != blank -%}
+      {{
+        section.settings.img
+        | image_url: width: section.settings.img.width
+        | image_tag: class: 'home-banner__img home-banner__img--desktop', loading: ''
+      }}
+      {{
+        section.settings.img_mob
+        | image_url: width: section.settings.img_mob.width
+        | image_tag: class: 'home-banner__img home-banner__img--mobile', loading: ''
+      }}
+    {%- else -%}
+      {{
+        section.settings.img
+        | image_url: width: section.settings.img.width
+        | image_tag: class: 'home-banner__img', loading: ''
+      }}
+    {%- endif -%}
+  {%- endif -%}
+</div>
+{% schema %}
+{
+  "name": "Home Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Img"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_mob",
+      "label": "Img for Mobile"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "liquid",
+      "id": "subtitle_top",
+      "label": "Top Subtitle"
+    },
+    {
+      "type": "liquid",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop the Favorites"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "liquid",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "logos",
+      "label": "Logos"
+    },
+    {
+      "type": "text",
+      "id": "class_custom",
+      "label": "Custom Class"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Banner"
+    }
+  ]
+}
+{% endschema %}

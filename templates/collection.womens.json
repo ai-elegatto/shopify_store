@@ -1,0 +1,223 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "womens_banner_MXhMkR": {
+      "type": "womens-banner",
+      "settings": {
+        "img": "shopify://shop_images/image_14.jpg",
+        "img_for_mobile": "shopify://shop_images/OLYA3271.jpg",
+        "title": "Women’s<br>\nJewelry",
+        "logo": "shopify://shop_images/Frame_1000002923.png",
+        "text": "real 18K gold<br>\n925 silver plating"
+      }
+    },
+    "collection-banner": {
+      "type": "collection-banner",
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal": false,
+        "enable_parallax": false,
+        "show_image": false,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "collection_description": "Each piece is designed with an artful eye and functional focus — combining comfort, safety, and durability. Materials are rigorously sourced from the finest metal and textile suppliers, ensuring unmatched quality.",
+        "show_breadcrumb": true,
+        "content_width": "xs",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "logos2_h4ePgE": {
+      "type": "logos2",
+      "blocks": {
+        "logo_KWKKga": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/advance-technology_1_1.png",
+            "text": "Guaranteed Not to Blacken or Tarnish"
+          }
+        },
+        "logo_GGMxGG": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/waterproof_1_1.png",
+            "text": "Waterproof"
+          }
+        },
+        "logo_rDWGLJ": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/hypoallergenic_1_1.png",
+            "text": "100% Hypoallergenic"
+          }
+        },
+        "logo_WVyCTE": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/giftbox_1_1.png",
+            "text": "Presented in the Original Gift Box"
+          }
+        },
+        "logo_xFBpCn": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/rating_1_1.png",
+            "text": "200,000+ Happy Customers"
+          }
+        }
+      },
+      "block_order": [
+        "logo_KWKKga",
+        "logo_GGMxGG",
+        "logo_rDWGLJ",
+        "logo_WVyCTE",
+        "logo_xFBpCn"
+      ],
+      "settings": {}
+    },
+    "logos_9LJWyd": {
+      "type": "logos",
+      "blocks": {
+        "logo_merjPa": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/waterproof_1.png",
+            "text": "Waterproof"
+          }
+        },
+        "logo_nR8BU8": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/advance-technology_1.png",
+            "text": "Guaranteed Not to Blacken or Tarnish"
+          }
+        },
+        "logo_aKxc6i": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/hypoallergenic_1.png",
+            "text": "100% Hypoallergenic"
+          }
+        },
+        "logo_Xw4AdN": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/giftbox_1.png",
+            "text": "Presented in the Original Gift Box"
+          }
+        },
+        "logo_Wgt4RE": {
+          "type": "logo",
+          "settings": {
+            "img": "shopify://shop_images/rating_1.png",
+            "text": "200,000+Happy Customers"
+          }
+        }
+      },
+      "block_order": [
+        "logo_merjPa",
+        "logo_nR8BU8",
+        "logo_aKxc6i",
+        "logo_Xw4AdN",
+        "logo_Wgt4RE"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "simple_banner_section_nQj99H": {
+      "type": "simple-banner-section",
+      "disabled": true,
+      "custom_css": [
+        ".simple-banner-section {margin-bottom: 50px; margin-top: -50px;}",
+        "@media (max-width: 768px) {.simple-banner-section {margin-bottom: 15px; margin-top: -25px; }}"
+      ],
+      "settings": {
+        "image_desc": "shopify://shop_images/Collection_page_1080x280_256e7e41-2c75-4580-9b49-deb988e3dd5b.png",
+        "image_mob": "shopify://shop_images/Collection_page_335x338_b51ae372-a625-4a12-8f61-a6c0c738305c.png",
+        "text": "<div class=\"collection-cyber-grid\">\n\n<div class=\"collection-cyber-col-1\">\n\n<div class=\"btn-coll-img\">\n<img src=\"https://cdn.shopify.com/s/files/1/0081/5379/2589/files/cyber_monady_1.png?v=1732888816\" alt=\"\">\n</div>\n\n<div class=\"coll-hero-title-reqular\">SALE</div>\n\n<div class=\"coll-banner-link\">\n<a href=\"/collections/the-bracelet-collection\">SHOP NOW</a>\n</div>\n\n</div>\n\n<div class=\"collection-cyber-col-2\">\n\n<div class=\"colle-limited-stock\">Very\n Limited\n Stock</div>\n\n<div class=\"coll-hero-big-text\">\n\n<div class=\"coll-hero-big-percet\">50%</div>\n<div class=\"coll-hero-big-off\">\n<div class=\"coll-hero-text-off\">OFF</div>\n<div class=\"coll-hero-text-stwd\">SITEWIDE</div>\n</div>\n</div>\n\n\n</div>\n</div>",
+        "width": 1080,
+        "width_mob": 340,
+        "height": 300,
+        "height_mob": 350,
+        "class": "collection-banner-top"
+      }
+    },
+    "simple_banner_collection_yywfDk": {
+      "type": "simple-banner-collection",
+      "disabled": true,
+      "custom_css": [
+        ".simple-banner-collection {margin-bottom: 50px; margin-top: -50px;}",
+        "@media (max-width: 768px) {.simple-banner-collection {margin-bottom: 15px; margin-top: -25px; }}"
+      ],
+      "settings": {
+        "image_desc": "shopify://shop_images/Collection_page_1080x280_d1fa0525-83a1-44ba-8d2b-0372654baab1.png",
+        "image_mob": "shopify://shop_images/Collection_page_335x338_fdc6e9ae-56af-47ba-b4cc-0d3e0e40fd3c.png",
+        "text": "<div class=\"main-banner-text-1\">\n\n<div class=\"main-banner-percent\">\n<div class=\"main-baner-precent-text\">\n<div class=\"main-baner-precent-num\">50</div>\n<div class=\"main-baner-precent-text-inner\">\n<div class=\"main-baner-precent-text-label\">\n%\n</div>\n<div class=\"main-baner-precent-text-label-text\">\nOFF\n</div>\n</div>\n</div>\n<div class=\"main-banner-sitewide\"><span>sitewide</span></div>\n</div>\n\n<div class=\"main-banner-title\"><strong>Unlock</strong><br>New Year Deals</div>\n</div>\n<div class=\"main-banner-text-2\">\n<div class=\"main-banner-btn\" style=\"display:none;\">\n{% if collection.handle contains 'best-gifts-for-her' or collection.handle contains 'the-bracelet-collection' %}\n<a href=\"#\" style=\"cursor:default;\">Shop now</a>\n{% else %}\n<a href=\"collections/the-bracelet-collection\" >Shop now</a>\n{% endif %}\n</div>\n<div class=\"banner-text-stock\">Timeless designs, crafted for<br>\nthe moments that matter</div>\n</div>",
+        "width": 1080,
+        "width_mob": 340,
+        "height": 300,
+        "height_mob": 350,
+        "class": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "color_scheme": "",
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "drawer",
+        "quick_links_menu": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_results_count": true,
+        "show_filter_group_name": false,
+        "show_filter_values_count": true,
+        "open_filters_by_default": false
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "separate_section_with_border": true,
+        "color_scheme": "",
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_count": 9,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "Recently viewed",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "womens_banner_MXhMkR",
+    "collection-banner",
+    "logos2_h4ePgE",
+    "logos_9LJWyd",
+    "simple_banner_section_nQj99H",
+    "simple_banner_collection_yywfDk",
+    "main",
+    "recently-viewed-products"
+  ]
+}

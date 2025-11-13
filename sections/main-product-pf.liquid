@@ -1,0 +1,690 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-bundle-min.js' | asset_url | script_tag }}
+{{ 'main-product-pf.css' | asset_url | stylesheet_tag }}
+{{ 'main-product-pf.js' | asset_url | script_tag }}
+{{ 'custom-app-styles.css' | asset_url | stylesheet_tag }}
+
+{% unless current_variant %}
+  {% assign current_variant = product.selected_or_first_available_variant %}
+{% endunless %}
+
+<section class="product-showcase-wrapper">
+  <product-showcase class="product-showcase" {{ block.shopify_attributes }}>
+    {% if section.settings.show_breadcrumbs %}
+      <div class="breadcrumbs">{{ section.settings.breadcrumb_text }}</div>
+    {% endif %}
+
+    <div class="product-anchors">
+      <div class="anchors-wrapper">
+        {% for block in section.blocks %}
+          {% if block.type == 'anchor' %}
+            <a
+              class="anchor-item"
+              href="javascript:void(0)"
+              data-target="{{ block.settings.accordion_target }}"
+            >
+              {{ block.settings.title }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="product-gallery">
+      {% if product.images.size > 0 %}
+        {% for image in product.images limit: 4 %}
+          <div class="product-image-container">
+            <img
+              src="{{ image | image_url: width: 400 }}"
+              alt="{{ image.alt | escape }}"
+              class="product-image gallery-thumb"
+              loading="lazy"
+              width="400"
+              height="400"
+              data-index="{{ forloop.index0 }}"
+              data-full-src="{{ image | image_url }}"
+            >
+          </div>
+        {% endfor %}
+        
+      {% else %}
+        {% for i in (1..4) %}
+          <div class="product-image-container">
+            <div class="product-image-placeholder">
+              {{ 'product-apparel-1' | placeholder_svg_tag }}
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="product-swiper-mobile">
+      <img
+        class="main-image"
+        width="100%"
+        height="376"
+        src="{{ product.images.first | img_url: 'master' }}"
+        alt="{{ product.title }}"
+        loading="lazy"
+      >
+      <div class="product-thumbs-swiper">
+        <div class="swiper-wrapper">
+          {% for image in product.images %}
+            <div class="swiper-slide">
+              <img
+                src="{{ image | img_url: 'compact' }}"
+                data-large-src="{{ image | img_url: 'master' }}"
+                alt="{{ product.title }}"
+                class="thumb-image"
+                loading="lazy"
+              >
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <div class="product-badges">
+        {% if section.settings.bestseller_tag != blank %}
+          <span class="bestseller-badge">{{ section.settings.bestseller_text }}</span>
+        {% endif %}
+        {% if section.settings.show_gift_box_info %}
+          <div class="gift-box-info">
+            <img width="11" height="11" alt="{{ section.settings.gift_box_text }}" src="{{ 'gift.svg' | asset_url }}">
+            {{ section.settings.gift_box_text }}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if section.settings.show_rating and product.metafields.reviews.rating %}
+        <div class="rating-section">
+          <span class="rating-score">{{ product.metafields.reviews.rating.value }}</span>
+          <div class="stars">
+            <img width="100" height="17.5" alt="Stars" src="{{ 'blue-stars.svg' | asset_url }}">
+          </div>
+          <span class="rating-text">Based on {{ product.metafields.reviews.rating_count }} reviews</span>
+        </div>
+      {% endif %}
+
+      <h1 class="product-title">{{ product.title }}</h1>
+
+      <div class="price-section">
+        {% if product.compare_at_price > product.price %}
+          <span class="original-price">{{ product.compare_at_price | money }}</span>
+          <span class="sale-price">{{ product.price | money }}</span>
+          <span class="save-badge">
+            SAVE {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
+          </span>
+        {% else %}
+          <span class="sale-price">{{ product.price | money }}</span>
+        {% endif %}
+      </div>
+
+      {% if section.settings.show_review_highlight %}
+        {% assign valid_reviews = 0 %}
+
+        {% for block in section.blocks %}
+          {% if block.settings.review_text != blank and block.settings.verified_buyer_text != blank %}
+            {% assign valid_reviews = valid_reviews | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+
+        {% if valid_reviews > 0 %}
+          <div class="swiper-container review-highlight">
+            <div class="review-stars">
+              <img width="100" height="17.5" src="{{ 'stars.svg' | asset_url }}" loading="lazy">
+            </div>
+
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                {% if block.settings.review_text != blank and block.settings.verified_buyer_text != blank %}
+                  <div class="swiper-slide">
+                    <div class="review-content">
+                      <p class="review-text">{{ block.settings.review_text }}</p>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+
+            <a href="#" class="verified-buyer">
+              <img width="17.5" height="17.5" src="{{ 'shield.svg' | asset_url }}" loading="lazy">
+              {{ section.blocks[0].settings.verified_buyer_text }}
+            </a>
+
+            {% if valid_reviews > 1 %}
+              <div class="reviews-nav-control">
+                <button class="swiper-button-next" aria-label="Próximo review">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="25" viewBox="0 0 13 25" fill="none">
+                    <path d="M2.95199 6.91983L4.01299 5.85983L9.79199 11.6368C9.88514 11.7294 9.95907 11.8395 10.0095 11.9607C10.06 12.082 10.0859 12.212 10.0859 12.3433C10.0859 12.4747 10.06 12.6047 10.0095 12.7259C9.95907 12.8472 9.88514 12.9573 9.79199 13.0498L4.01299 18.8298L2.95299 17.7698L8.37699 12.3448L2.95199 6.91983Z" fill="#1C1C1C"/>
+                  </svg>
+                </button>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endif %}
+
+      <form method="post" action="/cart/add" enctype="multipart/form-data" class="product-form">
+        <input type="hidden" name="id" value="{{ current_variant.id }}">
+
+        {% assign color_data = product.metafields.custom.product_color.value %}
+        {% if color_data != blank and color_data.size > 0 %}
+          {% assign current_color_name = '' %}
+          <div class="color-section">
+            <div class="color-header">
+              <div class="color-label">
+                Color:
+                {% for item in color_data %}
+                  {% assign parts = item | split: ':' %}
+                  {% if parts.size == 2 %}
+                    {% assign product_handle = parts[1] | strip %}
+                    {% if product.handle == product_handle %}
+                      {% assign current_color_name = parts[0] | strip %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+                {% if current_color_name != blank %}
+                  <span class="selected-color">{{ current_color_name }}</span>
+                {% endif %}
+              </div>
+            </div>
+            <div class="color-options">
+              {% for item in color_data %}
+                {% assign parts = item | split: ':' %}
+                {% if parts.size == 2 %}
+                  {% assign color_name = parts[0] | strip %}
+                  {% assign product_handle = parts[1] | strip %}
+                  {% assign target_product = all_products[product_handle] %}
+                  {% if target_product != blank %}
+                    <a
+                      href="{{ target_product.url }}?view=pdp-pf"
+                      class="color-option {% if product.handle == target_product.handle %}activated{% endif %}"
+                      title="{{ color_name }}"
+                    >
+                      {% if target_product.featured_image %}
+                        {{
+                          target_product.featured_image
+                          | image_url: width: 100
+                          | image_tag: class: 'color-image', loading: 'lazy', alt: color_name
+                        }}
+                      {% else %}
+                        <span class="color-name">{{ color_name }}</span>
+                      {% endif %}
+                    </a>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        <div id="size-guide" class="size-section">
+          <div class="size-header">
+            <div class="size-label">
+              Size:
+              <div class="size-selected"></div>
+            </div>
+            {% if section.settings.show_size_chart and section.settings.size_chart_page != blank %}
+              <button
+                type="button"
+                class="size-chart-link link"
+                aria-controls="size-chart-modal"
+                aria-expanded="false"
+              >
+                {{ section.settings.size_chart_text }}
+                <img width="14" height="14" src="{{ 'size-chart.svg' | asset_url }}">
+              </button>
+              <x-modal id="size-chart-modal" class="modal modal--lg color-scheme color-scheme--dialog">
+                <span class="h5" slot="header">{{ section.settings.size_chart_page.title }}</span>
+                <div class="prose">{{ section.settings.size_chart_page.content }}</div>
+              </x-modal>
+            {% endif %}
+          </div>
+          <div class="size-options">
+            {% assign selected_variant_found = false %}
+            {% for variant in product.variants %}
+              {% if variant.available %}
+                {% assign is_selected = false %}
+                {% if variant.id == current_variant.id and selected_variant_found == false %}
+                  {% assign is_selected = true %}
+                  {% assign selected_variant_found = true %}
+                {% elsif selected_variant_found == false and forloop.first %}
+                  {% assign is_selected = true %}
+                  {% assign selected_variant_found = true %}
+                {% endif %}
+                <label class="size-label-button{% if is_selected %} selected{% endif %}">
+                  <input
+                    type="radio"
+                    name="id"
+                    value="{{ variant.id }}"
+                    {% if is_selected %}
+                      checked
+                    {% endif %}
+                    class="size-radio"
+                    style="display:none;"
+                  >
+                  {{ variant.title }}
+                </label>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <button type="submit" class="add-to-cart-button">Add to Cart</button>
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when '@app' %}
+                {% render block %}
+              {% else %}
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </form>
+
+      <div id="features" class="key-features">
+        <div
+          class="key-features-header"
+          id="key-features-toggle"
+          aria-expanded="false"
+          aria-controls="key-features-content"
+          role="button"
+          tabindex="0"
+        >
+          <span>{{ section.settings.section_title | default: 'Key Features' }}</span>
+          <span class="key-features-icon">+</span>
+        </div>
+        <div
+          class="key-features-content"
+          id="key-features-content"
+          aria-hidden="true"
+        >
+          {% for block in section.blocks %}
+            {% if block.settings.feature_icon != blank or block.settings.feature_text != blank %}
+              <div class="key-feature-item" {{ block.shopify_attributes }}>
+                {% if block.settings.feature_icon != blank %}
+                  <div class="key-feature-icon">
+                    <img
+                      src="{{ block.settings.feature_icon | image_url: width: 60 }}"
+                      loading="lazy"
+                      alt="{{ block.settings.feature_text | strip_html | escape | default: 'Feature icon' }}"
+                      width="24"
+                      height="auto"
+                      class="key-feature-img"
+                    >
+                  </div>
+                {% endif %}
+                {% if block.settings.feature_text != blank %}
+                  <div class="key-feature-text">{{ block.settings.feature_text }}</div>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </product-showcase>
+</section>
+
+<div id="gallery-modal" class="gallery-modal" style="display: none;">
+  <div class="modal-content">
+    <div class="pswp__top-bar">
+      <button class="pswp__button circle-button modal-prev" aria-label="Previous">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          fill="none"
+          width="16"
+          class="icon icon--direction-aware"
+          viewBox="0 0 16 18"
+        >
+          <path d="M11 1 3 9l8 8" stroke="currentColor" stroke-linecap="square"></path>
+        </svg>
+      </button>
+      <button class="pswp__button circle-button circle-button--xl modal-close" aria-label="Close gallery">
+        <svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon" viewBox="0 0 16 16">
+          <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1"></path>
+        </svg>
+      </button>
+      <button class="pswp__button circle-button modal-next" aria-label="Next">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          fill="none"
+          width="16"
+          class="icon icon--direction-aware"
+          viewBox="0 0 16 18"
+        >
+          <path d="m5 17 8-8-8-8" stroke="currentColor" stroke-linecap="square"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-image-container">
+      <img id="modal-main-image" class="modal-main-image" src="" alt="" loading="lazy">
+    </div>
+    <div class="image-counter">
+      <span class="current-index">1</span>/<span class="total-images">{{ product.images.size }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="sticky-add-to-cart" style="display: none;">
+  <form method="post" action="/cart/add" enctype="multipart/form-data" class="sticky-product-form">
+    <input type="hidden" name="id" value="{{ current_variant.id }}">
+    <div class="product-details">
+      <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}">
+      <div class="product-details-info">
+        <span class="title">{{ product.title }}</span>
+        <div class="price-wrapper">
+          <div class="price">{{ product.price | money }}</div>
+          {% if product.compare_at_price > product.price %}
+            <div class="compare-at-price">{{ product.compare_at_price | money }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="sticky-add-to-cart-button">Add to Cart</button>
+  </form>
+</div>
+
+{% schema %}
+{
+  "name": "Product Showcase",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product Images"
+    },
+    {
+      "type": "color",
+      "id": "image_background_color",
+      "label": "Image background color",
+      "default": "#f7f7f9"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Breadcrumbs"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "label": "Show breadcrumbs",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_breadcrumbs",
+      "label": "Use custom breadcrumbs",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "breadcrumb_text",
+      "label": "Custom breadcrumb text",
+      "default": "HOME / MEN / BRACELETS",
+      "info": "Only used if 'Use custom breadcrumbs' is enabled"
+    },
+    {
+      "type": "header",
+      "content": "Badges"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bestseller_badge",
+      "label": "Show bestseller badge",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bestseller_tag",
+      "label": "Bestseller tag",
+      "default": "bestseller",
+      "info": "Show bestseller badge only if product has this tag"
+    },
+    {
+      "type": "text",
+      "id": "bestseller_text",
+      "label": "Bestseller text",
+      "default": "BESTSELLER"
+    },
+    {
+      "type": "color",
+      "id": "badge_background_color",
+      "label": "Badge background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "badge_border_color",
+      "label": "Badge border color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gift_box_info",
+      "label": "Show gift box info",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "gift_box_text",
+      "label": "Gift box text",
+      "default": "<p>COMES WITH PREMIUM GIFT BOX PACKAGING</p>"
+    },
+    {
+      "type": "color",
+      "id": "gift_box_background",
+      "label": "Gift box background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "gift_icon_color",
+      "label": "Gift icon color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Rating"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show rating",
+      "default": true,
+      "info": "Uses product.metafields.reviews.rating if available"
+    },
+    {
+      "type": "color",
+      "id": "rating_background",
+      "label": "Rating background",
+      "default": "#1e3a8a"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#3b82f6"
+    },
+    {
+      "type": "header",
+      "content": "Product Details"
+    },
+    {
+      "type": "color",
+      "id": "original_price_color",
+      "label": "Original price color",
+      "default": "#999999"
+    },
+    {
+      "type": "color",
+      "id": "sale_price_color",
+      "label": "Sale price color",
+      "default": "#dc2626"
+    },
+    {
+      "type": "color",
+      "id": "save_badge_background",
+      "label": "Save badge background",
+      "default": "#dc2626"
+    },
+    {
+      "type": "header",
+      "content": "Review Highlight"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_review_highlight",
+      "label": "Show review highlight",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "verified_buyer_text",
+      "label": "Verified buyer text",
+      "default": "Verified Buyer"
+    },
+    {
+      "type": "color",
+      "id": "review_background",
+      "label": "Review background",
+      "default": "#f8fafc"
+    },
+    {
+      "type": "color",
+      "id": "verified_link_color",
+      "label": "Verified link color",
+      "default": "#3b82f6"
+    },
+    {
+      "type": "header",
+      "content": "Size Chart"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_size_chart",
+      "label": "Show size chart link",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "size_chart_text",
+      "label": "Size chart text",
+      "default": "Size chart"
+    },
+    {
+      "type": "page",
+      "id": "size_chart_page",
+      "label": "Size chart page"
+    },
+    {
+      "type": "header",
+      "content": "Option Styling"
+    },
+    {
+      "type": "color",
+      "id": "swatch_selected_border",
+      "label": "Selected swatch border",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "size_button_background",
+      "label": "Option button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "size_button_border",
+      "label": "Option button border",
+      "default": "#d1d5db"
+    },
+    {
+      "type": "color",
+      "id": "size_button_selected_background",
+      "label": "Selected option button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "size_button_selected_border",
+      "label": "Selected option button border",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review text",
+          "default": "This bracelet elevates my style — I feel more confident and constantly receive compliments."
+        },
+        {
+          "type": "text",
+          "id": "verified_buyer_text",
+          "label": "Verified buyer text",
+          "default": "Verified Buyer"
+        }
+      ]
+    },
+    {
+      "type": "feature",
+      "name": "Key Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "feature_icon",
+          "label": "Feature Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "feature_text",
+          "label": "Feature Description",
+          "default": "<p>Describe the key feature</p>"
+        }
+      ]
+    },
+    {
+      "type": "anchor",
+      "name": "Anchor",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Anchor title",
+          "default": "Section"
+        },
+        {
+          "type": "text",
+          "id": "accordion_target",
+          "label": "Accordion target",
+          "default": "1",
+          "info": "Enter the dropdown number (e.g. 1) or an element id (e.g. #features)."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Showcase"
+    }
+  ]
+}
+{% endschema %}

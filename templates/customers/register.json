@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-customers-register",
+      "blocks": {
+        "6a34ed8d-daa7-4c74-8ccf-e3520aa58ac2": {
+          "type": "fields",
+          "settings": {
+            "show_marketing_consent": true
+          }
+        }
+      },
+      "block_order": [
+        "6a34ed8d-daa7-4c74-8ccf-e3520aa58ac2"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

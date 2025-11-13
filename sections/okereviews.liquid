@@ -1,0 +1,27 @@
+<div id="shopify-product-reviews-eo">
+  <div class="shopify-product-reviews-eo-wrapper">
+    <h2 class="okereviews-title">{{ section.settings.title }}</h2>
+    <div
+      data-oke-reviews-widget
+      data-oke-reviews-product-id="shopify-{{ product.id }}"
+    ></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Reviews"
+    }
+  ]
+}
+{% endschema %}

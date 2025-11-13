@@ -1,0 +1,106 @@
+{{ 'you-may-also-like.css' | asset_url | stylesheet_tag }}
+{{ 'you-may-also-like.js' | asset_url | script_tag }}
+
+<div class="you-may-also-like__container">
+  <h2 class="you-may-also-like__title">{{ section.settings.title }}</h2>
+  <div class="you-may-also-like__wrapper">
+    <div class="you-may-also-like__navigation">
+      <button class="swiper-button-prev you-may-also-like__nav-prev" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path d="M12.2499 20.0139L14.3999 17.8239L7.1499 10.5239L14.3999 3.27393L12.2499 1.07392L4.9499 8.37393L2.7499 10.5239L4.9499 12.7239L12.2499 20.0239L12.2499 20.0139Z" fill="black"/>
+        </svg>
+      </button>
+      <div class="swiper you-may-also-like__swiper">
+        <div class="swiper-wrapper">
+          {% assign collection = collections[section.settings.collection] %}
+          {% if collection %}
+            {% for product in collection.products %}
+              <div class="swiper-slide" data-block-index="{{ forloop.index0 }}">
+                <div class="you-may-also-like__item">
+                  <a href="{{ product.url }}">
+                    <img
+                      class="you-may-also-like__item-thumb"
+                      src="{{ product.featured_image | image_url }}"
+                      alt="{{ product.title }}"
+                    >
+                    <h3 class="you-may-also-like__item-title">{{ product.title }}</h3>
+                  </a>
+
+                  <div class="you-may-also-like__reviews-count">
+                    {%- render 'product-rating', show_placeholder: true, display_mode: 'count' -%}
+                    Reviews
+                  </div>
+
+                  <div class="you-may-also-like__price-wrapper">
+                    <div class="price">{{ product.price | money }}</div>
+                    <div class="compare-at-price">{{ product.compare_at_price | money }}</div>
+                  </div>
+
+                  <form method="post" action="/cart/add">
+                    {% if product.variants.size > 1 %}
+                      <select name="id" class="you-may-also-like__variant-select">
+                        {% for variant in product.variants %}
+                          <option
+                            value="{{ variant.id }}"
+                            {% if forloop.first %}
+                              selected
+                            {% endif %}
+                          >
+                            {{ variant.title -}}
+                            {%- if variant.available == false %} - Sold Out{% endif %}
+                          </option>
+                        {% endfor %}
+                      </select>
+                    {% else %}
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                    {% endif %}
+                    <button
+                      class="you-may-also-like__add-to-cart"
+                      type="submit"
+                      {% unless product.available %}
+                        disabled
+                      {% endunless %}
+                    >
+                      Add to cart
+                    </button>
+                  </form>
+                </div>
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+      <button class="swiper-button-next you-may-also-like__nav-next" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="20" height="21" focusable="false">
+          <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z" fill="black"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "You May Also Like",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "You May Also Like"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "You May Also Like",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

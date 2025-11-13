@@ -1,0 +1,55 @@
+
+{% if product.metafields.custom.product_color %}
+
+  <div class="custom-colors-links">
+      <div class="variant-picker__option-info h-stack justify-between gap-2">
+        <div class="h-stack gap-1">
+          <legend>{{ label }}</legend>
+        </div>
+      </div>
+    <div class="variant-picker__option-values h-stack gap-2.5 wrap">
+      {% for link in product.metafields.custom.product_color.value %}
+          {%- assign color_swatch_parts = link | split: ':' -%}
+          {%- assign color_swatch_name = color_swatch_parts.first | strip -%}
+          {%- assign color_swatch_value = color_swatch_parts.last | strip -%}
+        
+        <a href="/products/{{ color_swatch_value }}" class="block-swatch {% if product.handle == color_swatch_value %}active{% endif %}">{{ color_swatch_name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<!--script>
+
+  //fetch load product on click button
+  function getLinkUrl(){
+      document.querySelectorAll('.custom-colors-links .block-swatch').forEach(item=>{
+        item.addEventListener('click', function(e){
+          e.preventDefault();
+          clickPreviewProductPopupFetch(this.getAttribute('href'))
+        })
+      })
+  }getLinkUrl()
+
+
+  //change content pdp
+  function clickPreviewProductPopupFetch(fetchUrl){
+
+     fetch(fetchUrl)
+        .then(response => response.text())
+        .then(data => {
+           let html_div = document.createElement('div');
+          html_div.innerHTML = data;
+          
+          let html_dom = html_div.querySelector('#main').innerHTML;
+           document.querySelector('#main').innerHTML = html_dom;
+
+          window.history.pushState({"html":'',"pageTitle":''},"", fetchUrl);
+         
+         
+          getLinkUrl()
+          
+        })
+  }
+  
+</script-->

@@ -1,0 +1,313 @@
+
+        {% style %}
+                .banner-container{
+                    display:flex;
+                    align-items:center;
+                    justify-content:flex-end;
+                    margin:auto;
+                    padding:0 9%;
+                
+                    position: relative;
+                }
+                @media(max-width:768px){
+                    .banner-container{
+                        padding:0 3%;
+                        justify-content:flex-end;
+                        align-items: flex-start;
+                    }
+                }
+                .banner-container:before{
+                    display: block;
+                    content: "";
+                    padding-bottom: {{section.settings.height}}px;
+                }
+                .smpl-banner-text{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 3% 7%;
+                    display: flex;
+                    justify-content: flex-start;
+                    color: #fff;
+                    text-align: center;
+                    box-sizing: border-box;
+                } 
+                @media(max-width:768px){
+                    .smpl-banner-text{
+                        justify-content:center;
+                        padding: 7% 7%;
+                    }
+                }
+                .banner-container .smpl-image{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                    object-fit: cover;
+            
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+                .banner-container .smpl-img-mob{
+                    display:none;
+                }
+                @media(max-width:768px){
+                    .banner-container:before{
+                            padding-bottom: {{section.settings.height_mob}}px;
+                        }
+                    .banner-container .smpl-img-desc{
+                        display:none;
+                    }
+                    .banner-container .smpl-img-mob{
+                        display:block;
+                    }
+                }
+                .section-{{ section.id }}{
+                    max-width:{{section.settings.width}}px;
+                }
+                @media(max-width:768px){
+                .section-{{ section.id }}{
+                        max-width:{{section.settings.width_mob}}px;
+                    }
+                }
+            {% if section.settings.width == 0 %}
+                .section-{{ section.id }}{
+                    max-width:100%;
+                }
+             {% endif %}
+
+
+            .smpl-banner-text-inner{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+
+            .main-baner-precent-text{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+            }
+            .main-baner-precent-text-inner{
+                display:flex;
+                align-items: center;
+            }
+            .main-baner-precent-num{
+              
+                font-size: 130px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: .9;
+                text-transform: uppercase;
+                color:#fff;
+           
+             
+            }
+            .main-baner-precent-text-label{
+                font-size: 130px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: 13.371px;
+                text-transform: uppercase;
+              color:#fff;
+               
+            }
+            .main-baner-precent-text-label-text{
+           
+                font-size: 130px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: .9;
+                text-transform: uppercase;
+                color:#fff;
+           
+              
+            }
+ 
+            .main-banner-sitewide{
+                color: #FFF;
+                text-align: center;
+                font-size: 23.206px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 110%; /* 25.526px */
+                letter-spacing: 12.763px;
+                text-transform: uppercase;
+            }
+
+            .main-banner-title{
+                color: #FFF;
+                font-size: 45.577px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 115%;
+                text-transform: uppercase;
+                margin-top:50px;
+            }
+
+        
+            .main-banner-btn a{
+                display: inline-block;
+                color: #FFF;
+                text-align: center;
+                font-size: 23px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.3;
+                letter-spacing: 4.6px;
+                text-transform: uppercase;
+                border: 1.156px solid #FFF;
+                padding: 0px 10px;
+            }
+
+            .banner-text-stock{
+                color: #FFF;
+                text-align: center;
+                font-size: 20.213px;
+                font-style: normal;
+                margin-bottom:25px;
+                font-weight: 400;
+                line-height: 120%; /* 24.255px */
+            }
+
+            @media(max-width:768px){
+                .main-baner-precent-num{
+                    font-size:60px;
+                }
+                .main-baner-precent-text-label, .main-baner-precent-text-label-text{
+                    font-size:60px;
+                }
+                .main-banner-sitewide{
+                    font-size: 12px;
+                    letter-spacing: 6.665px;
+                }
+                .main-banner-title{
+                    font-size: 23.441px;
+                    font-style: normal;
+                    margin-top: 20px;
+                }
+                .banner-text-stock{
+                    font-size: 11px;
+                    margin-bottom:15px;
+                }
+                .main-banner-btn a{
+                    font-size: 12.647px;
+                    letter-spacing: 2.529px;
+                }
+              .main-baner-precent-text{
+                gap: 0;
+              }
+
+            }
+               
+        {% endstyle %}
+ 
+  
+    {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+  
+    <div class="banner-container simple-banner-section section-{{ section.id }} {{section.settings.class}}">
+        {% if section.settings.image_desc != blank %}
+            <img src="{{section.settings.image_desc | img_url : 'master'}}" class="smpl-image smpl-img-desc">
+        {% endif %}
+        {% if section.settings.image_mob != blank %}
+            <img src="{{section.settings.image_mob | img_url : 'master'}}" class="smpl-image smpl-img-mob">
+        {% endif %}
+        <div class="smpl-banner-text">
+            <div class="smpl-banner-text-inner">
+                {{section.settings.text}}
+            </div>
+        </div>
+    </div>
+  
+
+
+
+
+  
+  {% schema %}
+  {
+    "name": "Simple banner section",
+    "class": "simple-banner-section",
+    "tag": "section",
+    "disabled_on": {
+      "groups": ["custom.overlay"]
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_desc",
+        "label": "Image desctop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mob",
+        "label": "Image mobile"
+      },
+      {
+        "type": "html",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "range",
+        "id": "width",
+        "min": 0,
+        "max": 2000,
+        "step": 20,
+        "unit": "px",
+        "label": "Container width",
+        "default": 2000
+        },
+        {
+        "type": "range",
+        "id": "width_mob",
+        "min": 0,
+        "max": 2000,
+        "step": 20,
+        "unit": "px",
+        "label": "Container width mobile",
+        "default": 400
+        },
+        {
+        "type": "range",
+        "id": "height",
+        "min": 0,
+        "max": 3000,
+        "step": 50,
+        "unit": "px",
+        "label": "Height",
+        "default": 700
+        },
+        {
+        "type": "range",
+        "id": "height_mob",
+        "min": 0,
+        "max": 3000,
+        "step": 50,
+        "unit": "px",
+        "label": "Height mobile",
+        "default": 500
+        },
+        {
+        "type": "text",
+        "id": "class",
+        "label": "Custom class"
+      }
+    
+    ],
+    "presets": [
+      {
+        "name": "Simple banner section"
+      }
+    ]
+  }
+  {% endschema %}
+  

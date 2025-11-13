@@ -1,0 +1,111 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "home_banner_RdRwRK": {
+      "type": "home-banner",
+      "settings": {
+        "img": "shopify://shop_images/image_2.jpg",
+        "img_mob": "shopify://shop_images/image_4.jpg",
+        "title": "up to 60% OFF",
+        "subtitle_top": "Clearance Sale",
+        "subtitle": "Last chance / Limited Stock",
+        "button_text": "Shop the Favorites",
+        "button_link": "",
+        "text": "<svg width=\"107\" height=\"19\" viewBox=\"0 0 107 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.1734 2.16981L9.49999 0.796875L8.82661 2.16981L6.75037 6.40308L2.64075 7.00807L1.16119 7.22588L2.22064 8.28139L5.30174 11.351L4.26859 15.9017L3.91216 17.4716L5.34338 16.7345L9.49998 14.5937L13.6566 16.7345L15.0878 17.4716L14.7314 15.9017L13.6982 11.351L16.7793 8.28139L17.8388 7.22588L16.3592 7.00807L12.2496 6.40308L10.1734 2.16981Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M32.1734 2.16981L31.5 0.796875L30.8266 2.16981L28.7504 6.40308L24.6407 7.00807L23.1612 7.22588L24.2206 8.28139L27.3017 11.351L26.2686 15.9017L25.9122 17.4716L27.3434 16.7345L31.5 14.5937L35.6566 16.7345L37.0878 17.4716L36.7314 15.9017L35.6982 11.351L38.7793 8.28139L39.8388 7.22588L38.3592 7.00807L34.2496 6.40308L32.1734 2.16981Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M54.1734 2.16981L53.5 0.796875L52.8266 2.16981L50.7504 6.40308L46.6407 7.00807L45.1612 7.22588L46.2206 8.28139L49.3017 11.351L48.2686 15.9017L47.9122 17.4716L49.3434 16.7345L53.5 14.5937L57.6566 16.7345L59.0878 17.4716L58.7314 15.9017L57.6982 11.351L60.7793 8.28139L61.8388 7.22588L60.3592 7.00807L56.2496 6.40308L54.1734 2.16981Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M76.1734 2.16981L75.5 0.796875L74.8266 2.16981L72.7504 6.40308L68.6407 7.00807L67.1612 7.22588L68.2206 8.28139L71.3017 11.351L70.2686 15.9017L69.9122 17.4716L71.3434 16.7345L75.5 14.5937L79.6566 16.7345L81.0878 17.4716L80.7314 15.9017L79.6982 11.351L82.7793 8.28139L83.8388 7.22588L82.3592 7.00807L78.2496 6.40308L76.1734 2.16981Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M98.1734 2.16981L97.5 0.796875L96.8266 2.16981L94.7504 6.40308L90.6407 7.00807L89.1612 7.22588L90.2206 8.28139L93.3017 11.351L92.2686 15.9017L91.9122 17.4716L93.3434 16.7345L97.5 14.5937L101.657 16.7345L103.088 17.4716L102.731 15.9017L101.698 11.351L104.779 8.28139L105.839 7.22588L104.359 7.00807L100.25 6.40308L98.1734 2.16981Z\" fill=\"white\"/>\n</svg>\n<span>Trusted by the Best</span>",
+        "logos": "shopify://shop_images/gq_logo_6cbc261a-ed0e-4ca3-b415-8da6768effca.png",
+        "class_custom": "clearance--plp"
+      }
+    },
+    "collection-banner": {
+      "type": "collection-banner",
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal": false,
+        "enable_parallax": false,
+        "show_image": false,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "collection_description": "",
+        "show_breadcrumb": true,
+        "content_width": "xs",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "simple_banner_collection_HHaFnP": {
+      "type": "simple-banner-collection",
+      "disabled": true,
+      "custom_css": [
+        ".smpl-banner-text-inner {max-width: 355px;}",
+        ".simple-banner-collection {margin-bottom: 50px; margin-top: -50px;}",
+        "@media (max-width: 768px) {.simple-banner-collection {margin-bottom: 15px; margin-top: -25px; }}"
+      ],
+      "settings": {
+        "image_desc": "shopify://shop_images/Collection_page_1080x280_d1fa0525-83a1-44ba-8d2b-0372654baab1.png",
+        "image_mob": "shopify://shop_images/Collection_page_335x338_fdc6e9ae-56af-47ba-b4cc-0d3e0e40fd3c.png",
+        "text": "<div class=\"main-banner-text-1\">\n\n<div class=\"main-banner-percent\">\n<div class=\"main-baner-precent-text clearance-percent-text\">\n<div class=\"up-to-text\">\nUp\nto\n</div>\n<div class=\"main-baner-precent-num\">60</div>\n<div class=\"main-baner-precent-text-inner\">\n<div class=\"main-baner-precent-text-label\">\n%\n</div>\n<div class=\"main-baner-precent-text-label-text\">\nOFF\n</div>\n</div>\n</div>\n<div class=\"main-banner-sitewide clearance-text\"><span>ON Clearance ITEMS</span></div>\n</div>\n\n<div class=\"main-banner-title\"><strong>Unlock</strong><br>New Year Deals</div>\n</div>\n<div class=\"main-banner-text-2\">\n<div class=\"main-banner-btn\" style=\"display:none;\">\n{% if collection.handle contains 'best-gifts-for-her' or collection.handle contains 'the-bracelet-collection' %}\n<a href=\"#\" style=\"cursor:default;\">Shop now</a>\n{% else %}\n<a href=\"collections/the-bracelet-collection\" >Shop now</a>\n{% endif %}\n</div>\n<div class=\"banner-text-stock\">Timeless designs, crafted for<br>\nthe moments that matter</div>\n</div>",
+        "width": 1080,
+        "width_mob": 340,
+        "height": 300,
+        "height_mob": 350,
+        "class": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "color_scheme": "",
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "drawer",
+        "quick_links_menu": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_results_count": true,
+        "show_filter_group_name": false,
+        "show_filter_values_count": true,
+        "open_filters_by_default": false
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "separate_section_with_border": true,
+        "color_scheme": "",
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_count": 9,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "Recently viewed",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "home_banner_RdRwRK",
+    "collection-banner",
+    "simple_banner_collection_HHaFnP",
+    "main",
+    "recently-viewed-products"
+  ]
+}

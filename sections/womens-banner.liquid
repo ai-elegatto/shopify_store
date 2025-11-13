@@ -1,0 +1,74 @@
+<div class="womens-banner">
+  <div class="home-banner__block">
+    {%- if section.settings.title != blank -%}
+      <h1 class="womens-banner__title">{{ section.settings.title }}</h1>
+    {%- endif -%}
+    {%- if section.settings.logo != blank -%}
+      {{
+        section.settings.logo
+        | image_url: width: section.settings.logo.width
+        | image_tag: class: 'womens-banner__logo', loading: 'lazy'
+      }}
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <div class="womens-banner__text">{{ section.settings.text }}</div>
+    {%- endif -%}
+  </div>
+  {%- if section.settings.img != blank -%}
+    {%- if section.settings.img_for_mobile != blank -%}
+      {{
+        section.settings.img
+        | image_url: width: section.settings.img.width
+        | image_tag: class: 'womens-banner__img womens-banner__img--desktop', loading: ''
+      }}
+      {{
+        section.settings.img_for_mobile
+        | image_url: width: section.settings.img_for_mobile.width
+        | image_tag: class: 'womens-banner__img womens-banner__img--mobile', loading: ''
+      }}
+    {%- else -%}
+      {{
+        section.settings.img
+        | image_url: width: section.settings.img.width
+        | image_tag: class: 'womens-banner__img', loading: ''
+      }}
+    {%- endif -%}
+  {%- endif -%}
+</div>
+{% schema %}
+{
+  "name": "Womens Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Img"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_for_mobile",
+      "label": "Img for Mobile"
+    },
+    {
+      "type": "liquid",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "liquid",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Womens Banner"
+    }
+  ]
+}
+{% endschema %}

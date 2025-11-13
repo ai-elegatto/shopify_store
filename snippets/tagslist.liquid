@@ -1,0 +1,56 @@
+{% if tag1 != blank
+  or tag2 != blank
+  or tag3 != blank
+  or tag4 != blank
+  or tag5 != blank
+  or tag6 != blank
+  or tag7 != blank
+  or tag8 != blank
+  or tag9 != blank
+%}
+  {% assign tag1 = tag1 | downcase %}
+  {% assign tag2 = tag2 | downcase %}
+  {% assign tag3 = tag3 | downcase %}
+  {% assign tag4 = tag4 | downcase %}
+
+  {% assign tag5 = tag5 | downcase %}
+  {% assign tag6 = tag6 | downcase %}
+  {% assign tag7 = tag7 | downcase %}
+  {% assign tag8 = tag8 | downcase %}
+  {% assign tag9 = tag9 | downcase %}
+  <div class="product-page-labels">
+    {% for tag in product.tags %}
+      {% if tag contains '__label' %}
+        {%- assign tagname = tag | split: ':' -%}
+        {%- assign taglabel = tagname.last | strip | downcase -%}
+        {% if taglabel == tag1 %}
+          <div class="page-label" style="background-color:{{tag_color1}};">{{ taglabel }}</div>
+        {% endif %}
+        {% if taglabel == tag2 %}
+          <div class="page-label" style="background-color:{{tag_color2}};">{{ taglabel }}</div>
+        {% endif %}
+        {% if taglabel == tag3 %}
+          <div class="page-label" style="background-color:{{tag_color3}};">{{ taglabel }}</div>
+        {% endif %}
+        {% if taglabel == tag4 %}
+          <div class="page-label" style="background-color:{{tag_color4}};">{{ taglabel }}</div>
+        {% endif %}
+        {% if taglabel == tag5 %}
+          <div class="page-label" style="background-color:{{tag_color5}};">{{ taglabel }}</div>
+        {% endif %}
+        {% if taglabel == tag6 %}
+          <div class="page-label" style="background-color:{{tag_color6}};">{{ taglabel }}</div>
+        {% endif %}
+        {% if taglabel == tag7 %}
+          <div class="page-label" style="background-color:{{tag_color7}};">{{ taglabel }}</div>
+        {% endif %}
+        {% if taglabel == tag8 %}
+          <div class="page-label" style="background-color:{{tag_color8}};">{{ taglabel }}</div>
+        {% endif %}
+        {% if taglabel == tag9 %}
+          <div class="page-label" style="background-color:{{tag_color9}};">{{ taglabel }}</div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

@@ -1,0 +1,122 @@
+.exchange__container {
+  display: flex;
+  flex-direction: column-reverse;
+  background: #05316b;
+
+  .exchange__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .exchange__details {
+    padding: 32px 14px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 32px;
+  }
+
+  .exchange__details-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .exchange__details-subheading {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    max-width: unset;
+    padding: 0 30px;
+  }
+
+  .exchange__details-title {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .exchange__details-description {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+
+    .exchange__wrapper {
+      display: flex;
+      max-width: 1440px;
+      flex-direction: row;
+      margin: 0 auto;
+    }
+
+    .exchange__details {
+      display: flex;
+      padding-right: 80px;
+      padding-left: 60px;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 48px;
+      align-self: stretch;
+      flex: 2;
+    }
+
+    .exchange__details-subheading,
+    .exchange__details-title {
+      text-align: left;
+    }
+
+    .exchange__details-subheading {
+      max-width: 100%;
+      padding: 0;
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 19px;
+      letter-spacing: 0.28px;
+      text-transform: uppercase;
+    }
+
+    .exchange__details-title {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 37px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      max-width: 400px;
+    }
+
+    .exchange__details-description {
+      max-width: 612px;
+    }
+
+    .exchange__image img {
+      width: 694px;
+      height: auto;
+    }
+  }
+}

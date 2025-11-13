@@ -1,0 +1,49 @@
+<div class="logos-pdp">
+  <div class="logos-pdp-blocks">
+    {%- if text_1 != blank and img_1 -%}
+      <div class="logos-pdp-block">
+        <div class="logos-pdp-block__img">
+          {{ img_1 | image_url: width: img_1.width | image_tag: class: '', loading: 'lazy' }}
+        </div>
+
+        <p class="logos-pdp-block__text">{{ text_1 }}</p>
+      </div>
+    {%- endif -%}
+    {%- if text_2 != blank and img_2 -%}
+      <div class="logos-pdp-block">
+        <div class="logos-pdp-block__img">
+          {{ img_2 | image_url: width: img_2.width | image_tag: class: '', loading: 'lazy' }}
+        </div>
+
+        <p class="logos-pdp-block__text">{{ text_2 }}</p>
+      </div>
+    {%- endif -%}
+    {%- if text_3 != blank and img_3 -%}
+      <div class="logos-pdp-block">
+        <div class="logos-pdp-block__img">
+          {{ img_3 | image_url: width: img_3.width | image_tag: class: '', loading: 'lazy' }}
+        </div>
+
+        <p class="logos-pdp-block__text">{{ text_3 }}</p>
+      </div>
+    {%- endif -%}
+    {%- if text_4 != blank and img_4 -%}
+      <div class="logos-pdp-block">
+        <div class="logos-pdp-block__img">
+          {{ img_4 | image_url: width: img_4.width | image_tag: class: '', loading: 'lazy' }}
+        </div>
+
+        <p class="logos-pdp-block__text">{{ text_4 }}</p>
+      </div>
+    {%- endif -%}
+    {%- if text_5 != blank and img_5 -%}
+      <div class="logos-pdp-block">
+        <div class="logos-pdp-block__img">
+          {{ img_5 | image_url: width: img_5.width | image_tag: class: '', loading: 'lazy' }}
+        </div>
+
+        <p class="logos-pdp-block__text">{{ text_5 }}</p>
+      </div>
+    {%- endif -%}
+  </div>
+</div>

@@ -1,0 +1,241 @@
+#accordion-wrapper {
+  background: #fff;
+  margin: 0 auto;
+  display: flex;
+}
+.accordion-box {
+  padding: 24px 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+  gap: 24px;
+  display: flex;
+}
+.accordion-container {
+  width: 100%;
+}
+.accordion-item {
+  display: flex;
+  padding: 16px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid #b6b6b6;
+  padding-bottom: 16px;
+}
+
+.accordion-section-title {
+  color: #1c1c1c;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.accordion-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #1c1c1c;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.4px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .accordion-title {
+    scroll-margin-top: 70px;
+  }
+}
+.accordion-item.active .accordion-title {
+  font-weight: 600;
+}
+.accordion-answer-receive {
+  display: none;
+  color: #1c1c1c;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 175% */
+}
+
+.accordion-item.active .accordion-answer-receive {
+  display: block;
+}
+.accordion-item .icon-plus {
+  display: inline;
+}
+.accordion-item.active .icon-plus {
+  display: none;
+}
+.accordion-item .icon-minus {
+  display: none;
+}
+.accordion-item.active .icon-minus {
+  display: inline;
+}
+.accordion-container-desktop {
+  display: none;
+}
+
+.accordion-img-with-text .accordion-text {
+  color: #1c1c1c;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.accordion-img-with-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion-topics-with-text ul {
+  margin: 8px 0 8px 20px;
+}
+
+.accordion-topics-with-text a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.accordion-size-chart span.h5 {
+  display: none;
+}
+
+#accordion-wrapper .accordion-size-chart table {
+  width: 100% !important;
+}
+
+#accordion-wrapper .accordion-size-chart br {
+  display: none;
+}
+
+#accordion-wrapper .accordion-size-chart img {
+  max-width: 393px;
+  margin: 0 !important;
+  display: flex;
+}
+
+.accordion-size-chart {
+}
+
+.accordion-only-text {
+  color: #1c1c1c;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.accordion-only-text br {
+  display: none;
+}
+
+.accordion-size-chart strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.accordion-size-chart p {
+  margin-bottom: 8px;
+  display: block;
+  margin-top: 0;
+}
+
+.accordion-only-text strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+  .accordion-title {
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 1024px) {
+  #accordion-wrapper {
+  }
+
+  .accordion-box {
+    max-width: 1440px;
+    padding: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 100%;
+    margin: 0 auto;
+    gap: 48px;
+  }
+
+  .accordion-item {
+    border-bottom: 0;
+    width: fit-content;
+  }
+
+  .accordion-answer-receive {
+    display: none !important;
+  }
+  .accordion-container-desktop {
+    display: block;
+  }
+  .accordion-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #1c1c1c;
+  }
+  .accordion-icon {
+    display: none;
+  }
+  .accordion-section-title {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .accordion-only-text {
+    max-width: 636px;
+    color: #1c1c1c;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  .accordion-only-text strong {
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .accordion-only-text p {
+    margin-bottom: 12px;
+  }
+  .accordion-img-with-text {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+  .accordion-img-with-text img {
+    width: 321px;
+  }
+  .accordion-img-with-text .accordion-text {
+    max-width: 636px;
+  }
+}

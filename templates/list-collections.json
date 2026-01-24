@@ -15,13 +15,13 @@
         "subheading_yd9AYL": {
           "type": "subheading",
           "settings": {
-            "text": "Designed in California"
+            "text": "Maritime Heritage"
           }
         },
         "heading_bd77gm": {
           "type": "heading",
           "settings": {
-            "text": "Men's collection",
+            "text": "ROPE COLLECTION",
             "heading_tag": "h1"
           }
         },
@@ -35,7 +35,7 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "text": "Shop Men's",
+            "text": "Shop Rope Collection",
             "url": "shopify://collections/the-bracelet-collection",
             "background": "",
             "text_color": ""
@@ -49,8 +49,9 @@
         "button_6AHjUd"
       ],
       "settings": {
+        "color_scheme": "",
         "separate_section_with_border": true,
-        "image": "shopify://shop_images/Collection_Page_Banner_Desktop.png",
+        "image": "shopify://shop_images/Cinematic_product_photography_4k_202601231614.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
@@ -61,8 +62,10 @@
       "type": "main-list-collections",
       "disabled": true,
       "settings": {
+        "color_scheme": "",
         "show_title": true,
         "collections": [],
+        "collections_per_row_mobile": "1",
         "collections_per_row_desktop": 3,
         "image_size": "auto",
         "content_position": "place-self-end-start text-start",
@@ -77,13 +80,13 @@
         "subheading_86JMXK": {
           "type": "subheading",
           "settings": {
-            "text": "Handcrafted Elegance"
+            "text": "The Modern Statement"
           }
         },
         "heading_6D8DRE": {
           "type": "heading",
           "settings": {
-            "text": "Women's collection",
+            "text": "METAL COLLECTION",
             "heading_tag": "h1"
           }
         },
@@ -97,7 +100,7 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "text": "Shop Women's",
+            "text": "Explore Metal",
             "url": "shopify://collections/womens-collection",
             "background": "",
             "text_color": ""
@@ -111,10 +114,158 @@
         "button_NXRw67"
       ],
       "settings": {
+        "color_scheme": "",
         "separate_section_with_border": true,
-        "image": "shopify://shop_images/Collection_Page_Banner_Desktop_3cff7095-9e88-455a-bbe0-7606e94f62e3.png",
+        "image": "shopify://shop_images/Closeup_product_shot_4k_202601231823.jpg",
         "reveal_on_scroll": true,
         "image_position": "end",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "image_with_text_4XTQ4A": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_kwHJnF": {
+          "type": "subheading",
+          "settings": {
+            "text": "Timeless Leather"
+          }
+        },
+        "heading_iJzVA4": {
+          "type": "heading",
+          "settings": {
+            "text": "LEATHER COLLECTION",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_NR9FMj": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Today, Elegatto is known and loved by more than 85,000 men all over the world.</p><p></p><p>Whether you're looking to elevate your formal attire or add a touch of sophistication to your everyday wardrobe, Elegatto's Gentleman's Legacy collection offers an exclusive range of statement pieces that exude confidence and style on land or sea.</p>"
+          }
+        },
+        "button_TzXpBq": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Discover Leather",
+            "url": "shopify://collections/the-bracelet-collection",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_kwHJnF",
+        "heading_iJzVA4",
+        "richtext_NR9FMj",
+        "button_TzXpBq"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Closeup_product_photography_4k_202601231844.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "image_with_text_7Xa7UR": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_y3QVA7": {
+          "type": "subheading",
+          "settings": {
+            "text": "Natural Elements"
+          }
+        },
+        "heading_xHjB9G": {
+          "type": "heading",
+          "settings": {
+            "text": "BEADED COLLECTION",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_7mxT3p": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>We designed timeless shapes, organic forms and elegant natural materials layered with rich texture, earthen hues, and stunning statement pieces with a meticulous attention to detail and a deep appreciation for the beauty of nature.</p>"
+          }
+        },
+        "button_JBe9wR": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Explore Beads",
+            "url": "shopify://collections/womens-collection",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_y3QVA7",
+        "heading_xHjB9G",
+        "richtext_7mxT3p",
+        "button_JBe9wR"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Closeup_product_photography_4k_202601232126.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "end",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "image_with_text_9MnRDw": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_ywTMVE": {
+          "type": "subheading",
+          "settings": {
+            "text": "Timeless Leather"
+          }
+        },
+        "heading_j3gKHe": {
+          "type": "heading",
+          "settings": {
+            "text": "Sets & Stacks",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_iKkwi6": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Each piece is crafted with precision, using premium materials chosen for their strength, comfort, and lasting style. Designed in California and made to endure, these accessories are more than just detail — they’re the edge that gets you noticed.</p>"
+          }
+        },
+        "button_yYjVmi": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Shop Bundles",
+            "url": "shopify://collections/the-bracelet-collection",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_ywTMVE",
+        "heading_j3gKHe",
+        "richtext_iKkwi6",
+        "button_yYjVmi"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Collection_Page_Banner_Desktop.png",
+        "reveal_on_scroll": true,
+        "image_position": "start",
         "content_width": "sm",
         "remove_vertical_spacing": true
       }
@@ -123,6 +274,9 @@
   "order": [
     "image_with_text_MXXjUt",
     "main",
-    "image_with_text_geC4Tm"
+    "image_with_text_geC4Tm",
+    "image_with_text_4XTQ4A",
+    "image_with_text_7Xa7UR",
+    "image_with_text_9MnRDw"
   ]
 }

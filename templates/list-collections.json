@@ -28,7 +28,7 @@
         "richtext_Wc3TWE": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Today, Elegatto is known and loved by more than 85,000 men all over the world.</p><p></p><p>Whether you're looking to elevate your formal attire or add a touch of sophistication to your everyday wardrobe, Elegatto's Gentleman's Legacy collection offers an exclusive range of statement pieces that exude confidence and style on land or sea.</p>"
+            "content": "<p>Born from the sea, engineered for your daily adventures. Our Rope Collection combines the rugged durability of marine-grade nylon with the refined elegance of silver-plated shackles. These bracelets are water-resistant, colorfast, and designed to withstand the elements—whether you are sailing the coast or navigating the city. It is the ultimate balance of sport and luxury, offering a secure fit that never compromises on style.</p>"
           }
         },
         "button_6AHjUd": {
@@ -36,7 +36,7 @@
           "settings": {
             "style": "solid",
             "text": "Shop Rope Collection",
-            "url": "shopify://collections/the-bracelet-collection",
+            "url": "shopify://collections/nautical-rope-bracelet-collection",
             "background": "",
             "text_color": ""
           }
@@ -93,7 +93,7 @@
         "richtext_8ETBka": {
           "type": "richtext",
           "settings": {
-            "content": "<p>We designed timeless shapes, organic forms and elegant natural materials layered with rich texture, earthen hues, and stunning statement pieces with a meticulous attention to detail and a deep appreciation for the beauty of nature.</p>"
+            "content": "<p>Industrial precision meets sophisticated minimalism. Each cuff in the Metal Collection is crafted from premium stainless steel or sterling silver, polished to a mirror finish or brushed for a matte, modern look. These pieces are designed with clean, architectural lines that add a bold weight to your wrist without feeling heavy. Perfect for the boardroom or a black-tie dinner, this is the modern armor for the confident gentleman.</p>"
           }
         },
         "button_NXRw67": {
@@ -101,7 +101,7 @@
           "settings": {
             "style": "solid",
             "text": "Explore Metal",
-            "url": "shopify://collections/womens-collection",
+            "url": "shopify://collections/the-cuff-collection",
             "background": "",
             "text_color": ""
           }
@@ -142,7 +142,7 @@
         "richtext_NR9FMj": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Today, Elegatto is known and loved by more than 85,000 men all over the world.</p><p></p><p>Whether you're looking to elevate your formal attire or add a touch of sophistication to your everyday wardrobe, Elegatto's Gentleman's Legacy collection offers an exclusive range of statement pieces that exude confidence and style on land or sea.</p>"
+            "content": "<p>Timeless design rooted in the warmth of natural materials. Our Leather Collection features premium full-grain hides, expertly braided for a soft, comfortable feel that only gets better with age. Paired with our signature secure clasps, these bracelets offer a rich texture that complements a luxury watch or a crisp business suit. It is a classic masculine staple, redefined for the modern wardrobe with unmatched quality and character.</p>"
           }
         },
         "button_TzXpBq": {
@@ -150,7 +150,7 @@
           "settings": {
             "style": "solid",
             "text": "Discover Leather",
-            "url": "shopify://collections/the-bracelet-collection",
+            "url": "shopify://collections/leather-bracelets",
             "background": "",
             "text_color": ""
           }
@@ -191,7 +191,7 @@
         "richtext_7mxT3p": {
           "type": "richtext",
           "settings": {
-            "content": "<p>We designed timeless shapes, organic forms and elegant natural materials layered with rich texture, earthen hues, and stunning statement pieces with a meticulous attention to detail and a deep appreciation for the beauty of nature.</p>"
+            "content": "<p>Distinctive character crafted from the earth’s elements. The Beaded Collection showcases natural semi-precious stones—from matte Onyx to vibrant Tiger Eye—ensuring that no two pieces are exactly alike. These accessories add necessary texture and depth to a casual outfit, balancing relaxed vibes with premium craftsmanship. Designed to be worn solo or stacked, they provide a subtle yet powerful expression of individuality.</p>"
           }
         },
         "button_JBe9wR": {
@@ -199,7 +199,7 @@
           "settings": {
             "style": "solid",
             "text": "Explore Beads",
-            "url": "shopify://collections/womens-collection",
+            "url": "shopify://collections/beaded-bracelet-collection",
             "background": "",
             "text_color": ""
           }
@@ -240,7 +240,7 @@
         "richtext_iKkwi6": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Each piece is crafted with precision, using premium materials chosen for their strength, comfort, and lasting style. Designed in California and made to endure, these accessories are more than just detail — they’re the edge that gets you noticed.</p>"
+            "content": "<p>Master the art of stacking without the guesswork. Our Curated Bundles feature expertly paired combinations of textures and metals, selected by our stylists to create a cohesive, finished look instantly. Whether you are looking for the perfect gift or upgrading your own style, these sets offer a commanding presence on the wrist. Experience the confidence of a complete look, designed to save you time and elevate your attire effortlessly.</p>"
           }
         },
         "button_yYjVmi": {
@@ -248,7 +248,7 @@
           "settings": {
             "style": "solid",
             "text": "Shop Bundles",
-            "url": "shopify://collections/the-bracelet-collection",
+            "url": "shopify://collections/bundles",
             "background": "",
             "text_color": ""
           }

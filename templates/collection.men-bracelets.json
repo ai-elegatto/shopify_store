@@ -59,6 +59,80 @@
         "class_custom": "plp-banner home-banner--plp"
       }
     },
+    "scrolling_content_BKRdDP": {
+      "type": "scrolling-content",
+      "blocks": {
+        "image_a6QHzw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/forbes-logo-0_1.png"
+          }
+        },
+        "image_QHkUiJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GQ-Logo_1.png"
+          }
+        },
+        "image_GxgYtN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1597px-VOGUE_LOGO_svg.png"
+          }
+        },
+        "image_Xi8f6K": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/MensHealth_Logo_Black.svg"
+          }
+        },
+        "image_rJKrWy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Vanity-Fair-Logo-2013.png"
+          }
+        },
+        "text_UJqwyC": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Welcome to our shop"
+          }
+        },
+        "text_WdkDmp": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Discover our products"
+          }
+        }
+      },
+      "block_order": [
+        "image_a6QHzw",
+        "image_QHkUiJ",
+        "image_GxgYtN",
+        "image_Xi8f6K",
+        "image_rJKrWy",
+        "text_UJqwyC",
+        "text_WdkDmp"
+      ],
+      "name": "t:sections.scrolling_content.presets.scrolling_content.name",
+      "settings": {
+        "separate_section_with_border": true,
+        "scrolling_speed": 0.1,
+        "scroll_direction": "left",
+        "pause_on_hover": true,
+        "text_font": "heading",
+        "text_font_size_mobile": 30,
+        "text_font_size_desktop": 96,
+        "section_vertical_spacing_mobile": 10,
+        "section_vertical_spacing_desktop": 80,
+        "item_horizontal_spacing_mobile": 30,
+        "item_horizontal_spacing_desktop": 120,
+        "background": "",
+        "text_color": ""
+      }
+    },
     "collection-banner": {
       "type": "collection-banner",
       "disabled": true,
@@ -254,6 +328,7 @@
   "order": [
     "home_banner_GYrchk",
     "plp_banner_K8CbGp",
+    "scrolling_content_BKRdDP",
     "collection-banner",
     "logos2_h4ePgE",
     "logos_9LJWyd",

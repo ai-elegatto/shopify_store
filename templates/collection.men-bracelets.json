@@ -132,7 +132,7 @@
         "scroll_direction": "left",
         "pause_on_hover": true,
         "text_font": "heading",
-        "text_font_size_mobile": 30,
+        "text_font_size_mobile": 38,
         "text_font_size_desktop": 20,
         "section_vertical_spacing_mobile": 10,
         "section_vertical_spacing_desktop": 10,

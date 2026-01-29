@@ -11,6 +11,7 @@
   "sections": {
     "home_banner_GYrchk": {
       "type": "home-banner",
+      "disabled": true,
       "name": "Home Banner",
       "settings": {
         "img": "shopify://shop_images/Cinematic_product_photography_4k_202601281611.jpg",

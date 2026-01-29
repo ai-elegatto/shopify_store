@@ -27,6 +27,7 @@
     },
     "home_banner_KErKep": {
       "type": "home-banner",
+      "disabled": true,
       "settings": {
         "img": "shopify://shop_images/Cinematic_product_photography_4k_202601280949.jpg",
         "img_mob": "shopify://shop_images/Cinematic_product_photography_4k_202601280945.jpg",
@@ -45,18 +46,20 @@
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/Cinematic_product_photography_4k_202601291216.jpg",
+        "mobile_image": "shopify://shop_images/Cinematic_product_photography_4k_202601291216.jpg",
         "image_size": "auto",
         "allow_transparent_header": false,
-        "reveal": false,
+        "reveal": true,
         "enable_parallax": false,
-        "show_image": false,
-        "show_collection_title": true,
-        "show_collection_description": true,
+        "show_image": true,
+        "show_collection_title": false,
+        "show_collection_description": false,
         "collection_description": "Each piece is crafted with precision, using premium materials chosen for their strength, comfort, and lasting style. Designed in California and made to endure, these accessories are more than just detail — they’re the edge that gets you noticed.",
         "show_breadcrumb": true,
         "content_width": "xs",
         "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "overlay_opacity": 0
       }
     },
     "logos2_h4ePgE": {

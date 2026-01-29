@@ -59,6 +59,14 @@
         "class_custom": "plp-banner home-banner--plp"
       }
     },
+    "plp_banner_eYaUAk": {
+      "type": "plp-banner",
+      "name": "PLP Banner",
+      "settings": {
+        "img": "shopify://shop_images/BANNERS-PC.png",
+        "class_custom": ""
+      }
+    },
     "scrolling_content_BKRdDP": {
       "type": "scrolling-content",
       "blocks": {
@@ -124,11 +132,11 @@
         "pause_on_hover": true,
         "text_font": "heading",
         "text_font_size_mobile": 30,
-        "text_font_size_desktop": 96,
+        "text_font_size_desktop": 20,
         "section_vertical_spacing_mobile": 10,
-        "section_vertical_spacing_desktop": 80,
+        "section_vertical_spacing_desktop": 10,
         "item_horizontal_spacing_mobile": 30,
-        "item_horizontal_spacing_desktop": 120,
+        "item_horizontal_spacing_desktop": 20,
         "background": "",
         "text_color": ""
       }
@@ -328,6 +336,7 @@
   "order": [
     "home_banner_GYrchk",
     "plp_banner_K8CbGp",
+    "plp_banner_eYaUAk",
     "scrolling_content_BKRdDP",
     "collection-banner",
     "logos2_h4ePgE",

@@ -227,7 +227,7 @@ LIQUID
                   {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
   
                   {%- if forloop.index == 8 -%}
-                    <div class="fs-inline-wrapper" style="grid-column: 1 / -1; width: 100%; margin: 40px 0;">
+                    <div class="fs-inline-wrapper" style="grid-column: 1 / -1; width: 100%; margin: 20px 0;">
                       {% render 'flash-sale-banner' %}
                     </div>
                 {%- endif -%}

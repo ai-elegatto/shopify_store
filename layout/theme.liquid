@@ -5,7 +5,11 @@
 <!doctype html>
 
 <html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
-  <head>{% render 'yoast-seo' %}
+  <head>
+<!-- Start of Shoplift scripts -->
+{% render 'shoplift' %}
+<!-- End of Shoplift scripts -->
+{% render 'yoast-seo' %}
     
     <meta charset="utf-8">
     <meta
